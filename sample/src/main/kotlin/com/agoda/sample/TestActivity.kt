@@ -2,8 +2,8 @@ package com.agoda.sample
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
@@ -28,8 +28,8 @@ class TestActivity: AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.snackbar_button).setOnClickListener {
-            val snackbar = Snackbar.make(findViewById(android.R.id.content),
-                    "This is snackbar!", Snackbar.LENGTH_LONG)
+            val snackbar = com.google.android.material.snackbar.Snackbar.make(findViewById(android.R.id.content),
+                    "This is snackbar!", com.google.android.material.snackbar.Snackbar.LENGTH_LONG)
 
             snackbar.setAction("DISMISS") {
                 snackbar.dismiss()

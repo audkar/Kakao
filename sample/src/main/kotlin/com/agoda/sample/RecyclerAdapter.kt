@@ -1,14 +1,14 @@
 package com.agoda.sample
 
-import android.support.annotation.LayoutRes
-import android.support.v7.widget.RecyclerView
+import androidx.annotation.LayoutRes
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 
-class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter: androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     override fun getItemCount() = 10
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -18,7 +18,7 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             ViewHolder(parent.inflate(R.layout.item_recycler))
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
         lateinit var title: TextView
         lateinit var subtitle: TextView
         lateinit var button: Button
